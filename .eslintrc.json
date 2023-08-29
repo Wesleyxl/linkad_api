@@ -10,6 +10,7 @@
   },
   "plugins": ["eslint-plugin-import-helpers"],
   "rules": {
+    "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/quotes": [2, "double"],
     "@typescript-eslint/semi": [2, "always"],
     "comma-dangle": "off",

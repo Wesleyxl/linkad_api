@@ -4,6 +4,7 @@ import express from "express";
 import { resolve } from "path";
 
 import sequelize from "./database";
+import route from "./routes";
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ class App {
     this.express = express();
     this.middleware();
     this.database();
+    this.routes();
   }
 
   private middleware(): void {
@@ -25,6 +27,10 @@ class App {
 
   private database(): void {
     this.databaseConnection = sequelize;
+  }
+
+  private routes(): void {
+    this.express.use(route);
   }
 }
 
