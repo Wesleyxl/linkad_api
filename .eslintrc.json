@@ -12,7 +12,20 @@
   "rules": {
     "@typescript-eslint/quotes": [2, "double"],
     "@typescript-eslint/semi": [2, "always"],
-    "@typescript-eslint/space-before-function-paren": [2, "never"],
+    "comma-dangle": "off",
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "space-before-function-paren": [
+      "off",
+      {
+        "anonymous": "always",
+        "named": "always",
+        "asyncArrow": "always"
+      }
+    ],
+    "@typescript-eslint/space-before-function-paren": "off",
     "import-helpers/order-imports": [
       "warn",
       {
