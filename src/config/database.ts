@@ -4,7 +4,7 @@ dotenv.config({ path: ".env" });
 export default {
   username: process.env.DB_USERNAME || "root",
   password: process.env.DB_PASSWORD || "",
-  database: process.env.DB_DATABASE || "api_typescript",
+  database: process.env.DB_DATABASE || "linkad",
   host: process.env.DB_HOST || "localhost",
   dialect: process.env.DB_DRIVE || "mysql",
   drive: process.env.DB_DRIVE || "mysql",
