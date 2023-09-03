@@ -11,7 +11,7 @@ class User extends Model {
   public password_hash!: string;
   public password!: string;
   public url!: string;
-  id?: number;
+  public id!: number;
 
   static initModel(sequelize: Sequelize): void {
     this.init(
