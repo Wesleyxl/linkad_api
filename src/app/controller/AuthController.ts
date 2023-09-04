@@ -100,7 +100,10 @@ class AuthController {
       const email = req.userEmail;
 
       if (email) {
-        const user = await User.findOne({ where: { email } });
+        const user = await User.findOne({
+          where: { email },
+          attributes: { exclude: ["password_hash", "updatedAt"] },
+        });
 
         if (!user) {
           return res.status(400).json({
