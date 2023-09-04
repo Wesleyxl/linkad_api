@@ -1,5 +1,6 @@
 import { Sequelize } from "sequelize";
 
+import Publication from "../app/model/Publication";
 import User from "../app/model/User";
 import dbConfig from "../config/database";
 
@@ -20,7 +21,7 @@ const sequelize = new Sequelize(
 );
 
 // models arrays
-const models = [User];
+const models = [User, Publication];
 
 // init models
 models.forEach((model) => {
@@ -28,5 +29,6 @@ models.forEach((model) => {
 });
 
 // associations
+Publication.associate(sequelize.models);
 
 export default sequelize;

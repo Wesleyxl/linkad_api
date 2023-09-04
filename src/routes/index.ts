@@ -2,6 +2,7 @@ import { Router } from "express";
 
 // controller
 import AuthController from "../app/controller/AuthController";
+import PublicationController from "../app/controller/PublicationController";
 import UserController from "../app/controller/UserController";
 import Auth from "../app/middleware/auth";
 
@@ -18,5 +19,9 @@ route.get("/auth/me", Auth, AuthController.me);
 
 // users
 route.get("/users", Auth, UserController.index);
+
+// publications
+route.get("/publications", Auth, PublicationController.index);
+route.post("/publications", Auth, PublicationController.store);
 
 export default route;
